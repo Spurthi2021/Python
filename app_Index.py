@@ -1,3 +1,6 @@
+#Program to run a app(here a html file) if CPU and Memory Utilization is more
+#Create a folder templates/index.html in the same path as app_index.py
+
 import psutil
 from flask import Flask, render_template
 
