@@ -1,7 +1,7 @@
 #These are few different Dictionary Methods
 
 myDict = {
-    "Name" : "Akshay Dodwadmath",
+    "Name" : "Shruti Patel",
     "Hobbies" : ["Reading Books", "Jogging", "Thinking"],
     "Degrees" : {
         "BE" : "Pass",
@@ -35,7 +35,7 @@ myDict.update(Dict2)
 print(myDict)
 
 Dict3 = {
-    "Name" : "Akshay D"
+    "Name" : "Akshay Sir"
 }
 myDict.update(Dict3)
 print(myDict)
