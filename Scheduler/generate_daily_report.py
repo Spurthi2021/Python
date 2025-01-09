@@ -31,7 +31,7 @@ def generate_daily_report():
         
     """
      # Define the report file name and save location
-    report_dir = r"../Python/Source/Daily_reports"
+    report_dir = r"../Python/Scheduler/Source/Daily_reports"
     if not os.path.exists(report_dir):
         os.makedirs(report_dir) 
 
