@@ -11,9 +11,9 @@ EMAIL = {secrets.EMAIL}
 auth = HTTPBasicAuth(EMAIL, API_TOKEN)
 
 assignment_rules = {
-    "frontend": "accountId_frontend",
-    "backend": "accountId_backend",
-    "database": "accountId_database"
+    "frontend": "345tfgn6tkujhbjjjk",
+    "backend": "876trtyfgfhj98oolikhjh5",
+    "database": "4567vghjfi6rfy"
 }
 
 def assign_issue(issue_key, component):
