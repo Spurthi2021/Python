@@ -1,11 +1,17 @@
 import requests
 from requests.auth import HTTPBasicAuth
 import json
+from dotenv import load_dotenv
+import os
 
 def create_Issue(projectKey, issueType, noofIssues) :
+    # Load the .env file
+    load_dotenv()
 
-    API_TOKEN = {secrets.API_TOKEN}
-    EMAIL = {secrets.EMAIL}
+    # Jira Configuration
+    JIRA_URL = "https://spubmath.atlassian.net"
+    API_TOKEN = os.getenv("API_KEY")
+    EMAIL = os.getenv("EMAIL"}
     auth = HTTPBasicAuth(EMAIL, API_TOKEN)
     url = "https://spubmath.atlassian.net/rest/api/3/issue"
     
