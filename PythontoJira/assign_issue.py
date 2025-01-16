@@ -2,11 +2,16 @@ import requests
 from requests.auth import HTTPBasicAuth
 import json
 from get_user_account_id import get_user_account_id
+from dotenv import load_dotenv
+import os
+
+# Load the .env file
+load_dotenv()
 
 # Jira Configuration
 JIRA_URL = "https://spubmath.atlassian.net"
-API_TOKEN = {secrets.API_TOKEN}
-EMAIL = {secrets.EMAIL}
+API_TOKEN = os.getenv("API_KEY")
+EMAIL = os.getenv("EMAIL"}
 auth = HTTPBasicAuth(EMAIL, API_TOKEN)
 PROJECT_KEY = "SCRUM"
 
