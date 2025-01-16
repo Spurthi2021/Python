@@ -4,10 +4,16 @@ import requests
 from requests.auth import HTTPBasicAuth
 import json
 
-# Jira API Credentials
-JIRA_URL = https://spubmath.atlassian.net/rest/api/3/issue
-API_TOKEN = {secrets.API_TOKEN}
-EMAIL = {secrets.EMAIL}
+from dotenv import load_dotenv
+import os
+
+# Load the .env file
+load_dotenv()
+
+# Jira Configuration
+JIRA_URL = "https://spubmath.atlassian.net"
+API_TOKEN = os.getenv("API_KEY")
+EMAIL = os.getenv("EMAIL"}
 auth = HTTPBasicAuth(EMAIL, API_TOKEN)
 
 assignment_rules = {
