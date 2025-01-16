@@ -1,22 +1,27 @@
 import requests
 from requests.auth import HTTPBasicAuth
 import json
-
-# Jira Configuration
-JIRA_URL = "https://spubmath.atlassian.net"
-API_TOKEN = {secrets.API_TOKEN}
-EMAIL = {secrets.EMAIL}
-auth = HTTPBasicAuth(EMAIL, API_TOKEN)
-PROJECT_KEY = "SCRUM"
-
-auth = HTTPBasicAuth(EMAIL, API_TOKEN)
-
-headers = {
-    "Accept": "application/json",
-    "Content-Type": "application/json"
-}
+from dotenv import load_dotenv
+import os
 
 def get_user_account_id(email):
+    load_dotenv()
+    
+    # Jira Configuration
+    JIRA_URL = "https://spubmath.atlassian.net"
+    API_TOKEN = os.getenv("API_KEY")
+    EMAIL = os.getenv("EMAIL"}
+    auth = HTTPBasicAuth(EMAIL, API_TOKEN)
+    PROJECT_KEY = "SCRUM"
+    
+    auth = HTTPBasicAuth(EMAIL, API_TOKEN)
+    
+    headers = {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+    }
+
+
     """
     Get a user's account ID from their email.
     """
