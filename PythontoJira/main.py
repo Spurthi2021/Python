@@ -1,7 +1,6 @@
 import requests
 from requests.auth import HTTPBasicAuth
 import json
-
 from assign_issue import assign_issue
 from search_issues import search_issues
 from update_issue_status import update_issue_status
